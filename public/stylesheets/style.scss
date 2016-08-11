@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
+#home-page {
+
+  text-align: center;
+
+  h1 {
+    margin-top: 150px;
+  }
+
+}
+
+nav {
+  ul li {
+    margin-bottom: 20px;
+  }
+}
+
+#product-list {
+
+  list-style-type: none;
+
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  li {
+
+    float: left;
+    margin-bottom: 50px;
+
+    &:after {
+      content: '';
+      display: table;
+    }
+
+    img {
+      display: block;
+      width: 300px;
+      height: 300px;
+      float: left;
+    }
+
+    .product-info {
+      float: right;
+      padding: 50px;
+      width: 300px;
+      height: 300px;
+    }
+
+  }
+
+}

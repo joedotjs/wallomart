@@ -1,0 +1,34 @@
+{% extends "../layout.html" %}
+{% block content %}
+
+<h1>Products</h1>
+
+<form action="/products" method="GET">
+    <select name="sortField">
+        <option>Name</option>
+        <option>Price</option>
+    </select>
+    <select name="sortDirection">
+        <option>ASC</option>
+        <option>DESC</option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+
+<ul id="product-list">
+
+    {% for product in products %}
+
+    <li>
+        <img src="/images/{{ product.photo }}">
+        <div class="product-info">
+            <h1><a href="{{ product.link }}">{{ product.name }}</a></h1>
+            <h4>{{ product.cost }}</h4>
+        </div>
+    </li>
+
+    {% endfor %}
+
+</ul>
+
+{% endblock %}
